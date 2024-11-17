@@ -16,14 +16,5 @@ pipeline {
                sh 'mvn clean package'
             }
         }        
-        stage('Create Image'){
-            steps{
-               steps {
-                	script {
-                		sh 'ansible-playbook task.yml'
-                	}
-                }
-            }
-        }
     }
 }
