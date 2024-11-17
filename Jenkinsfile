@@ -1,5 +1,7 @@
 pipeline {  
-    agent any
+    agent {
+        label 'Ansible-Node'
+    }
     stages {
         stage('Clone') {
             steps {
@@ -11,5 +13,13 @@ pipeline {
                sh 'mvn clean package'
             }
         }
+        stage('Create Image'){
+            steps{
+               steps {
+                	script {
+                		sh 'ansible-playbook task.yml'
+                	}
+                }
+            }
     }
 }
