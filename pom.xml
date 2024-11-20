@@ -17,7 +17,7 @@
   </dependencies>
      <properties>
      <sonar.host.url>https://localhost:9000/</sonar.host.url>
-     <sonar.login>oadin</sonar.login>
+     <sonar.login>admin</sonar.login>
      <sonar.password>Omkar@99</sonar.password>
    </properties>
   <build>
